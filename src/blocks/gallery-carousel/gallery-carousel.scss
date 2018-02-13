@@ -1,0 +1,39 @@
+// В этом файле должны быть стили для БЭМ-блока gallery-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.gallery-carousel {
+
+  $block-name: &; // #{$block-name}__element
+
+
+  .owl-thumbs {
+    display: flex;
+    width: 100%;
+    padding: 20px 0 0 0;
+  }
+
+  .owl-thumb-item {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    // opacity: 0.4;
+
+    &:not(:first-child) {
+      margin-left: 1.5%;
+    }
+  }
+
+  .owl-thumb-item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .owl-thumb-item.active {
+    opacity: 1;
+    outline: none;
+    cursor: inherit;
+  }
+}

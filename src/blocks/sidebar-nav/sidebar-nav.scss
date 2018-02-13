@@ -1,0 +1,60 @@
+// В этом файле должны быть стили для БЭМ-блока sidebar-nav, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.sidebar-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border: 1px solid #e7e7e7;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &__item {
+    position: relative;
+
+    &:not(:first-child) {
+      border-top: 1px solid #e7e7e7;
+    }
+
+    &--active {
+      &:before {
+        content: "";
+        width: 6px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #c713a1;
+      }
+
+      #{$block-name}__link {
+        color: #000;
+
+        &:hover,
+        &:focus {
+          color: #000;
+          background: transparent;
+          cursor: default;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 1em 1.7em;
+
+    &:hover,
+    &:focus {
+      background: #f1f1f1;
+      color: #a3a3a3;
+    }
+  }
+}

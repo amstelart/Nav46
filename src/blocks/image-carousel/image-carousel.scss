@@ -1,0 +1,41 @@
+// В этом файле должны быть стили для БЭМ-блока image-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.image-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .owl-nav {
+    // position: relative;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      opacity: 0.7;
+      svg {
+        stroke: #fff;
+      }
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    .owl-prev {
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+}

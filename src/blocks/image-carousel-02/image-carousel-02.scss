@@ -1,0 +1,9 @@
+// В этом файле должны быть стили для БЭМ-блока image-carousel-02, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.image-carousel-02 {
+
+  $block-name:                &; // #{$block-name}__element
+
+}

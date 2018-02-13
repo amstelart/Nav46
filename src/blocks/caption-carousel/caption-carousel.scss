@@ -1,0 +1,81 @@
+// В этом файле должны быть стили для БЭМ-блока caption-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.caption-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    position: relative;
+  }
+
+  &__photo {
+    float: left;
+    width: calc(100% - 420px);
+  }
+
+  &__info {
+    float: left;
+    width: 420px;
+    padding: 0 20px;
+  }
+
+  .owl-nav {
+    // position: relative;
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    right: 330px;
+    bottom: 10px;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      padding: 5px 10px;
+      background: #fff;
+      border: 2px solid #dcdcdc;
+
+      svg {
+        stroke: #000;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: #01cbff;
+      }
+    }
+
+    .owl-prev {
+      transform: translateY(-50%);
+      top: 50%;
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    &__photo {
+      float: none;
+      width: 100%;
+    }
+
+    &__info {
+      float: none;
+      width: 100%;
+      padding: 0 20px;
+    }
+
+    .owl-nav {
+      top: 10px;
+      left: 10px;
+    }
+  }
+}

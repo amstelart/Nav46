@@ -1,0 +1,25 @@
+// В этом файле должны быть стили для БЭМ-блока page-cols, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-cols {
+
+  $block-name:                &; // #{$block-name}__element
+
+  // display: flex;
+  @include row;
+
+  &__l-col {
+    @include col();
+    @include col(lg, 3);
+    // width: 295px;
+    // margin-right: 30px;
+    // flex-shrink: 0;
+  }
+  &__m-col {
+    @include col();
+    @include col(lg, 9);
+    // flex-grow: 1;
+    // width: 100%;
+  }
+}

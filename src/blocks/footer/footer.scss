@@ -1,0 +1,160 @@
+// В этом файле должны быть стили для БЭМ-блока footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #020b20;
+  padding-top: 40px;
+  padding-bottom: 60px;
+
+  &__container {
+    @include container;
+  }
+
+  &__inner {
+    @include row;
+  }
+
+  &__l-col {
+    @include col();
+    @include col(lg, 9);
+  }
+  &__r-col {
+    @include col();
+    @include col(lg, 3);
+  }
+
+  &__parth {
+
+    padding: 25px 0;
+    & + #{$block-name}__parth {
+      border-top: 1px solid #3c4d74;
+    }
+    &--top {
+      display: flex;
+    }
+  }
+
+  &__logo {
+
+    .logo {
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+      font-weight: 300;
+      margin-right: 60px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #3c4d74;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+
+  &__info-icon {
+    fill:#3c4d74;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+
+  &__nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+
+    li > a {
+      color: #3c4d74;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: #fff;
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+
+    // &__info-list {
+    //   li + li {
+    //     margin: 0;
+    //   }
+    // }
+  }
+
+  @media (max-width: $screen-md) {
+    padding-top: 20px;
+    padding-bottom: 25px;
+
+    &__logo {
+
+      .logo {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__parth {
+
+      &--top {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &__info-list {
+      margin-right: 0;
+      text-align: center;
+      li {
+        display: block;
+        svg {
+          display: block;
+          margin: 10px auto;
+        }
+        & + li {
+          margin-left: 0;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    &__nav {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        margin: 4px 0;
+      }
+      li > a {
+        padding: 4px;
+      }
+    }
+
+    &__r-col {
+      text-align: center;
+    }
+  }
+
+}

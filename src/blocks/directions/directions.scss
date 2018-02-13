@@ -1,0 +1,16 @@
+// В этом файле должны быть стили для БЭМ-блока directions, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.directions {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+  .dir-card {
+    @include col();
+    @include col(md, 6);
+  }
+
+}

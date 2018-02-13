@@ -1,0 +1,47 @@
+// В этом файле должны быть стили для БЭМ-блока copiryght, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.copiryght {
+
+  $block-name:                &; // #{$block-name}__element
+
+  background: #01050f;
+
+  &__container {
+    @include container;
+  }
+
+  &__inner {
+    @include row;
+  }
+
+  &__item {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: 15px;
+    color: #3a3a3a;
+    text-align: center;
+    a {
+      color: #3a3a3a;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: lighten(#3a3a3a, 20%);
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    &__inner {
+      justify-content: space-between;
+    }
+    &__item {
+      flex-basis: auto;
+    }
+  }
+
+}

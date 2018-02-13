@@ -1,0 +1,91 @@
+// В этом файле должны быть стили для БЭМ-блока feedback-question, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.feedback-question {
+
+  $block-name:                &; // #{$block-name}__element
+
+  border: 1px solid #dedede;
+  padding: 40px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+  &__caption {
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  &__form {
+    @include row;
+    max-width: 740px;
+    margin: auto;
+    .field-text,
+    .field-actions {
+      margin-top: 0;
+      margin-bottom: 0;
+      @include col();
+      @include col(lg, 4);
+
+      .btn {
+        width: 100%;
+      }
+    }
+    .field-text {
+      flex-grow: 100%;
+    }
+  }
+
+  .field-caption {
+    flex-basis: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #cacaca;
+    a {
+      color: #cacaca;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: darken(#cacaca, 15%);
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+
+    &__form {
+
+      .field-text {
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    padding: 40px 10px;
+
+    &__header {
+      margin-bottom: 15px;
+    }
+
+    &__title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    &__caption {
+      font-size: 14px;
+    }
+  }
+}

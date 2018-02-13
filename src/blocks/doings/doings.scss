@@ -1,0 +1,89 @@
+// В этом файле должны быть стили для БЭМ-блока doings, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.doings {
+
+  $block-name:                &; // #{$block-name}__element
+
+  @include row;
+
+
+  &__card {
+    @include col();
+    @include col(lg, 6);
+    margin-bottom: 20px;
+
+    &--main {
+      display: flex;
+      flex-wrap: wrap;
+      @include col();
+      @include col(lg, 12);
+
+      #{$block-name}__card-image {
+        width: 50%;
+        position: relative;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        @media (max-width: $screen-lg) {
+          width: 100%;
+          min-height: 300px;
+        }
+      }
+
+      #{$block-name}__card-body {
+        width: 50%;
+        background: #c3ecff;
+        border-color: #c3ecff;
+        &:hover,
+        &:focus {
+          border-color: #c3ecff;
+        }
+
+        @media (max-width: $screen-lg) {
+          width: 100%;
+        }
+      }
+
+      #{$block-name}__card-date {
+        color: #1d96cb;
+      }
+    }
+  }
+
+  &__card-body {
+    text-decoration: none;
+    border: 6px solid #eaeaea;
+    background-color: #eaeaea;
+    display: block;
+    color: #010724;
+    padding: 30px;
+    &:hover,
+    &:focus {
+      border-color: #a71289;
+      color: #000;
+    }
+  }
+
+  &__card-title {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+  }
+
+  &__card-date {
+    color: #afafaf;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 1.6em;
+  }
+
+  &__card-text {
+  }
+}

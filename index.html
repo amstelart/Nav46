@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html class="no-js page page--main" lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Навигация 46</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+  </script>
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+<link rel="manifest" href="/img/site.webmanifest">
+<link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#ffffff">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/img/mstile-144x144.png">
+<meta name="msapplication-config" content="/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"></head>
+<body>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header" role="banner">
+        <div class="header">
+          <div class="header__container">
+            <div class="header__inner">
+              <div class="header__logo">
+                <a href="/" class="logo">
+                  <img src="img/logo.png" alt="logo">
+                </a>
+              </div>
+              <div class="header__info">
+                <ul class="header__info-list">
+                  <li>
+                    <svg class="header__info-icon" width="21" height="25">
+                      <use xlink:href="img/sprite-svg.svg#map-icon"/>
+                    </svg>
+                    г. Курск ул. Дзержинского, 50, оф.78</li>
+                  <li>
+                    <svg class="header__info-icon" width="23.97" height="24">
+                      <use xlink:href="img/sprite-svg.svg#phone-icon"/>
+                    </svg>
+                    <a href="tel:+74712746777"></a>+7 (4712) 746-777</li>
+                </ul>
+                <button class="btn btn--black-outline">Заказать звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav id="main-nav" class="main-nav" role="navigation">
+          <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="#" class="main-nav__link">
+                Направления деятельности
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="page-team.html" class="main-nav__link">
+                Сотрудники
+              </a>
+            </li>
+            <li class="main-nav__item main-nav__item--active">
+              <a href="page-certificates.html" class="main-nav__link">
+                Сертификаты
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="page-doings.html" class="main-nav__link">
+                События
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="page-partners.html" class="main-nav__link">
+                Партнеры
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="page-vacancies.html" class="main-nav__link">
+                Вакансии
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="page-contacts.html" class="main-nav__link">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="owl-carousel main-slider">
+        <div class="main-slider__item" style="background-image: url(img/main-slide-01.jpg);">
+          <div class="main-slider__inner">
+            <div class="main-slider__caption">
+              <h2 class="main-slider__title">Оформите <br>карту тахографа</h2>
+              <div class="main-slider__text">
+                <p>Скидка на карты 5% до начала марта</p>
+              </div>
+              <a href="#" class="btn btn--slider">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-slider__item" style="background-image: url(img/main-slide-01.jpg);">
+          <div class="main-slider__inner">
+            <div class="main-slider__caption">
+              <h2 class="main-slider__title">Оформите <br>карту тахографа</h2>
+              <div class="main-slider__text">
+                <p>Скидка на карты 5% до начала марта</p>
+              </div>
+              <a href="#" class="btn btn--slider">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-slider__item" style="background-image: url(img/main-slide-01.jpg);">
+          <div class="main-slider__inner">
+            <div class="main-slider__caption">
+              <h2 class="main-slider__title">Оформите <br>карту тахографа</h2>
+              <div class="main-slider__text">
+                <p>Скидка на карты 5% до начала марта</p>
+              </div>
+              <a href="#" class="btn btn--slider">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main role="main">
+        <div class="main-section main-section--directions">
+          <div class="main-section__container">
+            <div class="main-section__header">
+              <h2 class="main-section__title">Направления деятельности</h2>
+            </div>
+            <div class="main-section__content">
+              <div class="directions">
+                <div class="dir-card">
+                  <a href="page-directions--satellite-monitoring.html" class="dir-card__link" style="background-image: url(img/dir-card-image-02.jpg);">
+                    <div class="dir-card__body">
+                      <svg class="dir-card__icon" width="30" height="37.97">
+                        <use xlink:href="img/sprite-svg.svg#dir-icon-01"/>
+                      </svg>
+                      <div class="dir-card__title">Спутниковый контроль</div>
+                      <div class="dir-card__caption">ПСМ, ДУТы (Omnicomm и TKLS), ДРТ , CAN-крокодил, CAN-LOG</div>
+                      <div class="dir-card__more">Подробнее</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="dir-card">
+                  <a href="page-directions--tachographs.html" class="dir-card__link" style="background-image: url(img/dir-card-image-02.jpg);">
+                    <div class="dir-card__body">
+                      <svg class="dir-card__icon" width="48" height="36">
+                        <use xlink:href="img/sprite-svg.svg#dir-icon-02"/>
+                      </svg>
+                      <div class="dir-card__title">Тахографы и сервис</div>
+                      <div class="dir-card__caption">Continental - VDO, Штрих-ТахоRus, Меркурий, Атол Drive</div>
+                      <div class="dir-card__more">Подробнее</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="dir-card">
+                  <a href="page-directions--apk.html" class="dir-card__link" style="background-image: url(img/dir-card-image-03.jpg);">
+                    <div class="dir-card__body">
+                      <svg class="dir-card__icon" width="43" height="37">
+                        <use xlink:href="img/sprite-svg.svg#dir-icon-03"/>
+                      </svg>
+                      <div class="dir-card__title">Решения для АПК</div>
+                      <div class="dir-card__caption">CRUIZER II, ENVIZIO PRO, SMARTRAX MD, EZ-Guide 250, CFX-750</div>
+                      <div class="dir-card__more">Подробнее</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="dir-card">
+                  <a href="page-directions--service.html" class="dir-card__link" style="background-image: url(img/dir-card-image-04.jpg);">
+                    <div class="dir-card__body">
+                      <svg class="dir-card__icon" width="58" height="29">
+                        <use xlink:href="img/sprite-svg.svg#dir-icon-04"/>
+                      </svg>
+                      <div class="dir-card__title">БПЛА и сервис</div>
+                      <div class="dir-card__caption">Phantom 4 PRO, Mavic PRO, Inspire, Spark</div>
+                      <div class="dir-card__more">Подробнее</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="feedback-choice">
+                <div class="feedback-choice__header">
+                  <div class="feedback-choice__title">Затрудняетесь с выбором оборудования?</div>
+                  <div class="feedback-choice__caption">Позвоните по телефону +7 (4712) 746-777 или оставьте заявку на сайте и мы подскажем вам</div>
+                </div>
+                <form class="feedback-choice__form">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="E-mail" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <button class="btn btn--blue">Оставить заявку</button>
+                  </div>
+                  <div class="field-caption">
+                    Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-section">
+          <div class="main-section__container">
+            <div class="main-section__header">
+              <h2 class="main-section__title">Наши службы</h2>
+            </div>
+            <div class="main-section__content">
+              <div class="tabs">
+                <ul class="tabs__links" role="tablist">
+                  <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                    <a href="#gallery-tab-01" class="tabs__link" data-toggle="tab" role="tab">В мастерской</a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#gallery-tab-02" class="tabs__link" data-toggle="tab" role="tab">На выезде
+                  </a></li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#gallery-tab-03" class="tabs__link" data-toggle="tab" role="tab">В офисе</a>
+                  </li>
+                  <li class="tabs__link-wrap" role="presentation">
+                    <a href="#gallery-tab-04" class="tabs__link" data-toggle="tab" role="tab">В воздухе</a>
+                  </li>
+                </ul>
+                <div class="tabs__content-wrapper">
+                  <div class="tabs__content-item tabs__content-item--active" id="gallery-tab-01" role="tabpanel">
+                    <div class="owl-carousel gallery-carousel">
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Wojciech Szaturski">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/uploads/14127101912749510b8ed/82743738?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Kyle Szegedi">
+                      </div>
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1426200830301-372615e4ac54?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Barn Images">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Joshua Earle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="gallery-tab-02" role="tabpanel">
+                    <div class="owl-carousel gallery-carousel">
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Wojciech Szaturski">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/uploads/14127101912749510b8ed/82743738?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Kyle Szegedi">
+                      </div>
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1426200830301-372615e4ac54?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Barn Images">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Joshua Earle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="gallery-tab-03" role="tabpanel">
+                    <div class="owl-carousel gallery-carousel">
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Wojciech Szaturski">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/uploads/14127101912749510b8ed/82743738?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Kyle Szegedi">
+                      </div>
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1426200830301-372615e4ac54?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Barn Images">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Joshua Earle">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__content-item" id="gallery-tab-04" role="tabpanel">
+                    <div class="owl-carousel gallery-carousel">
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1423439793616-f2aa4356b37e?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Wojciech Szaturski">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/uploads/14127101912749510b8ed/82743738?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Kyle Szegedi">
+                      </div>
+                      <div class="item">
+                        <img src="https://unsplash.imgix.net/photo-1426200830301-372615e4ac54?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Barn Images">
+                      </div>
+                      <div class="item">
+                        <img src="https://ununsplash.imgix.net/photo-1423753623104-718aaace6772?fit=crop&amp;fm=jpg&amp;h=1080&amp;q=75&amp;w=1900" alt="photo by Joshua Earle">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-section main-section--results">
+          <div class="main-section__container">
+            <div class="main-section__header">
+              <h2 class="main-section__title">Результаты наших клиентов</h2>
+            </div>
+            <div class="main-section__content">
+              <div class="results">
+                <div class="res-card">
+                  <a href="#" class="res-card__link" style="background-image: url(img/res-card-image-02.jpg);">
+                    <div class="res-card__body">
+                      <div class="res-card__logo">
+                        <img src="img/res-logo-magnit.png" width="241" height="55" alt="">
+                      </div>
+                      <div class="res-card__title">30%</div>
+                      <div class="res-card__caption">Сокращение издержек с помощью системы спутникового мониторинга</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="res-card">
+                  <a href="#" class="res-card__link" style="background-image: url(img/res-card-image-02.jpg);">
+                    <div class="res-card__body">
+                      <div class="res-card__logo">
+                        <img src="img/res-logo-g7.png" width="131" height="101" alt="">
+                      </div>
+                      <div class="res-card__title">30%</div>
+                      <div class="res-card__caption">Сокращение издержек с помощью системы спутникового мониторинга</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="res-card">
+                  <a href="#" class="res-card__link" style="background-image: url(img/res-card-image-03.jpg);">
+                    <div class="res-card__body">
+                      <div class="res-card__logo">
+                        <img src="img/res-logo-magnit.png" width="241" height="55" alt="">
+                      </div>
+                      <div class="res-card__title">30%</div>
+                      <div class="res-card__caption">Сокращение издержек с помощью системы спутникового мониторинга</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="res-card">
+                  <a href="#" class="res-card__link" style="background-image: url(img/res-card-image-04.jpg);">
+                    <div class="res-card__body">
+                      <div class="res-card__logo">
+                        <img src="img/res-logo-g7.png" width="131" height="101" alt="">
+                      </div>
+                      <div class="res-card__title">30%</div>
+                      <div class="res-card__caption">Сокращение издержек с помощью системы спутникового мониторинга</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-section main-section--rules">
+          <div class="main-section__container">
+            <div class="main-section__header">
+              <h2 class="main-section__title">Наши принципы</h2>
+              <p class="main-section__caption">Деятельность нашей компании базируется на четырёх принципах</p>
+            </div>
+            <div class="main-section__content">
+              <div class="rules">
+                <div class="rules__item">
+                  <div class="rules__num">1</div>
+                  <div class="rules__title">Компетентность</div>
+                  <div class="rules__caption">Внедрение только надежных технологий и продуктов</div>
+                </div>
+                <div class="rules__item">
+                  <div class="rules__num">2</div>
+                  <div class="rules__title">Честность</div>
+                  <div class="rules__caption">Соблюдение законов, открытая ценовая политика, уважение к конкурентам</div>
+                </div>
+                <div class="rules__item">
+                  <div class="rules__num">3</div>
+                  <div class="rules__title">Приверженность</div>
+                  <div class="rules__caption">Постоянная обратная связь с клиентом, взаимное развитие</div>
+                </div>
+                <div class="rules__item">
+                  <div class="rules__num">4</div>
+                  <div class="rules__title">Устремленность</div>
+                  <div class="rules__caption">Доведение идей до завершения и развитие в смежных направлениях</div>
+                </div>
+              </div>
+              <div class="feedback-question">
+                <div class="feedback-question__header">
+                  <div class="feedback-question__title">Остались вопросы?</div>
+                  <div class="feedback-question__caption">Вы можете позвонить по телефону +7 (4712) 746-777 или оставить заявку на сайте</div>
+                </div>
+                <form class="feedback-question__form">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="E-mail" id="" name="">
+                    </span>
+                  </label>
+                  <div class="field-actions">
+                    <button class="btn btn--blue">Оставить заявку</button>
+                  </div>
+                  <div class="field-caption">
+                    Оставляя заявку вы соглашаетесь на обработку персональных данных. <a href="#">Политика конфиденциальности</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="page__footer-wrapper">
+      <footer class="page-footer" role="contentinfo">
+        <div class="footer">
+          <div class="footer__container">
+            <div class="footer__inner">
+              <div class="footer__l-col">
+                <div class="footer__parth footer__parth--top">
+                  <div class="footer__logo">
+                    <a href="/" class="logo">
+                      <span>Навигация46</span>
+                    </a>
+                  </div>
+                  <div class="footer__info">
+                    <ul class="footer__info-list">
+                      <li>
+                        <svg class="footer__info-icon" width="21" height="25">
+                          <use xlink:href="img/sprite-svg.svg#map-icon"/>
+                        </svg>
+                        г. Курск ул. Дзержинского, 50, оф.78</li>
+                      <li>
+                        <svg class="footer__info-icon" width="23.97" height="24">
+                          <use xlink:href="img/sprite-svg.svg#phone-icon"/>
+                        </svg>
+                        <a href="tel:+74712746777"></a>+7 (4712) 746-777</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="footer__parth footer__parth--bottom">
+                  <ul class="footer__nav">
+                    <li><a href="#">Направления деятельности</a></li>
+                    <li><a href="#">Сотрудники</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="#">События</a></li>
+                    <li><a href="#">Партнёры</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Контакты</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="footer__r-col">
+                <button class="btn btn--dark-blue-outline">Заказать звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copiryght">
+          <div class="copiryght__container">
+            <div class="copiryght__inner">
+              <div class="copiryght__item">
+                Навигация46 © 2018
+              </div>
+              <div class="copiryght__item">
+                Разработка - <a href="#">Showbiz Studio</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate.min.js"></script>
+  <script src="js/svg4everybody.js"></script>
+  <script src="js/isMobile.min.js"></script>
+  <script src="js/owl.carousel.js"></script>
+  <script src="js/owl.carousel2.thumbs.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/ofi.js"></script>
+  <script src="js/global-script.js"></script>
+</body>
+</html>

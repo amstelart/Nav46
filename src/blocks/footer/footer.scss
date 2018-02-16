@@ -63,6 +63,15 @@
     font-weight: 300;
     color: #3c4d74;
 
+    .phone-link {
+      color: #3c4d74;
+
+      &:hover,
+      &:focus {
+        color: lighten(#3c4d74, 5%);
+      }
+    }
+
     li {
       display: inline-block;
       margin-right: 20px;

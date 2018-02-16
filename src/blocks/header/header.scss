@@ -29,6 +29,15 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    .phone-link {
+      color: #000;
+
+      &:hover,
+      &:focus {
+        color: lighten(#3c4d74, 5%);
+      }
+    }
   }
 
   &__info-list {

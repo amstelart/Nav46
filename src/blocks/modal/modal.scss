@@ -46,7 +46,7 @@ $z-index-modal:               100 !default;
     height: 100%;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 580px;
       height: auto;
 
       #{$block-name}--open & {
@@ -66,23 +66,28 @@ $z-index-modal:               100 !default;
   }
 
   &__header {
-    padding: 5px 40px 0 10px;
+    padding: 5px 50px 0 50px;
     flex-shrink: 0;
+    text-align: center;
   }
 
   &__title {
     margin-top: ($line-height / 2);
-    margin-bottom: ($line-height / 2);
-    font-size: $font-size--h4;
+    margin-bottom: ($line-height / 3);
+    font-size: 48px;
     line-height: 1.4;
-    font-weight: 700;
-    color: currentColor;
+    font-weight: 200;
+    color: #0587c2;
+
+    @media (max-width: ($screen-md - 1)) {
+      font-size: 32px;
+    }
   }
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 15px;
+    right: 15px;
   }
 
   &__body {
@@ -91,8 +96,15 @@ $z-index-modal:               100 !default;
   }
 
   &__footer {
-    padding: 10px;
+    padding: 10px 50px 30px;
     flex-shrink: 0;
+    color: #bdbdbd;
+    font-size: 14px;
+    text-align: center;
+
+    a {
+      color: #bdbdbd;
+    }
   }
 
   &__backdrop {

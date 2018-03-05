@@ -34,4 +34,23 @@ $line-height:                 1.375em !default;
     line-height: $line-height;
     color: currentColor;
   }
+
+  &--modal {
+    max-width: 260px;
+    margin: auto;
+
+    .btn {
+      width: 100%;
+    }
+
+    input {
+      &::placeholder {
+        color: #c3c3c3;
+      }
+    }
+
+    .field-actions {
+      margin: 0;
+    }
+  }
 }

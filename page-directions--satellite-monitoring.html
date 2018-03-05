@@ -67,7 +67,7 @@
                     </svg>
                     <a class="phone-link" href="tel:+74712746777">+7 (4712) 746-777</a></li>
                 </ul>
-                <button class="btn btn--black-outline">Заказать звонок</button>
+                <button class="btn btn--black-outline" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
               </div>
             </div>
           </div>
@@ -301,7 +301,7 @@
                 </div>
               </div>
               <div class="footer__r-col">
-                <button class="btn btn--dark-blue-outline">Заказать звонок</button>
+                <button class="btn btn--dark-blue-outline" type="button" data-toggle="modal" data-target="#modal-call">Заказать звонок</button>
               </div>
             </div>
           </div>
@@ -319,6 +319,37 @@
           </div>
         </div>
       </footer>
+      <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+              <h4 class="modal__title">Заказать звонок</h4>
+            </div>
+            <div class="modal__body">
+              <form action="" class="form--modal">
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Ваше имя" id="" name="">
+                  </span>
+                </label>
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="E-mail" id="" name="">
+                  </span>
+                </label>
+                <div class="field-actions">
+                  <button class="btn btn--blue">Заказать звонок</button>
+                </div>
+              </form>
+            </div>
+            <div class="modal__footer">
+              <p>Оставляя заявку вы соглашаетесь на обработку персональных данных<br>
+              <a href="#">Политика конфиденциальности</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/jquery.min.js"></script>

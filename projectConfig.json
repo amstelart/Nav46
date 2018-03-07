@@ -89,7 +89,8 @@
     "caption-carousel": [],
     "main-slider": [],
     "gallery-carousel": [],
-    "sertificates": []
+    "sertificates": [],
+    "page-slider": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -113,8 +114,7 @@
     "./node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
     "./node_modules/object-fit-images/dist/ofi.js"
   ],
-  "addJsAfter": [
-  ],
+  "addJsAfter": [],
   "addImages": [
     "./src/img/*.{jpg,jpeg,gif,png,svg,ico}"
   ],

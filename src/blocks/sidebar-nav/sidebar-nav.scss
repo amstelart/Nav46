@@ -57,4 +57,12 @@
       color: #a3a3a3;
     }
   }
+
+  &--sticky {
+    position: fixed;
+    z-index: 101;
+    top: 15px;
+  }
+
+
 }

@@ -59,7 +59,7 @@
     }
 
     &.active {
-      
+
       &:before {
         content: "";
         width: 6px;
@@ -83,7 +83,7 @@
 
   &--sticky {
     position: fixed;
-    z-index: 101;
+    z-index: 80;
     top: 15px;
   }
 

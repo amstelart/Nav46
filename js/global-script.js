@@ -95,7 +95,7 @@ $( document ).ready(function() {
       $(menu_selector + " a").each(function() {
         var hash = $(this).attr("href");
         var target = $(hash);
-        if (target.position().top <= scroll_top && target.position().top + target.outerHeight(true) > scroll_top) {
+        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
           $(menu_selector + " a.active").removeClass("active");
           $(this).addClass("active");
         } else {

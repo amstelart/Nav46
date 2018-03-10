@@ -107,7 +107,7 @@ $( document ).ready(function() {
 
     $(document).on("scroll", onScroll);
 
-    $("a[href^=#]").click(function(e) {
+    $("a[href^=#][data-scroll]").click(function(e) {
         var hash = $(this).attr("href");
         var target = $(hash);
 

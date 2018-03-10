@@ -95,11 +95,7 @@ $( document ).ready(function() {
       $(menu_selector + " a").each(function() {
         var hash = $(this).attr("href");
         var target = $(hash);
-<<<<<<< HEAD
         if (target.position().top <= scroll_top + 5 && target.position().top + target.outerHeight() > scroll_top) {
-=======
-        if (target.position().top <= scroll_top && target.position().top + target.outerHeight(true) > scroll_top) {
->>>>>>> 6e7294fecdd9446582825ae0560170fcf8888b71
           $(menu_selector + " a.active").removeClass("active");
           $(this).addClass("active");
         } else {

@@ -1,0 +1,38 @@
+// В этом файле должны быть стили для БЭМ-блока reviews-carousel, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.reviews-carousel {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .item {
+    &__caption {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #fff;
+      padding: 20px 0;
+    }
+  }
+
+  .owl-prev {
+    left: -60px;
+  }
+  .owl-next {
+    right: -60px;
+  }
+
+  .owl-prev,
+  .owl-next {
+    width: 30px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-60%);
+
+    svg {
+      stroke: #fff;
+    }
+  }
+
+}

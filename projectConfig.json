@@ -90,7 +90,8 @@
     "main-slider": [],
     "gallery-carousel": [],
     "sertificates": [],
-    "page-slider": []
+    "page-slider": [],
+    "reviews-carousel": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

@@ -28,6 +28,14 @@
     color: #fff;
   }
 
+  &--reviews {
+    background: #aa1d8d;
+
+    #{$block-name}__header {
+      color: #fff;
+    }
+  }
+
   &--rules {
 
     #{$block-name}__header {

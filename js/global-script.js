@@ -41,6 +41,32 @@ $( document ).ready(function() {
     navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 2px;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 2px;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>']
   });
 
+  // Карусель отзывов
+  $(".reviews-carousel").owlCarousel({
+    items: 1,
+    margin: 20,
+    nav: false,
+    loop: true,
+    center: false,
+    dots: false,
+    navText: ['<svg width="100%" height="100%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 2px;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="100%" height="100%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 2px;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+    responsive : {
+        // breakpoint from 0 up
+        0 : {
+          items: 1
+        },
+        // breakpoint from 480 up
+        480 : {
+          items: 2
+        },
+        // breakpoint from 992 up
+        992 : {
+          items: 4,
+          nav: true
+        }
+    }
+  });
+
   // Контентный слайдер изображений с описанием
   $(".caption-carousel").owlCarousel({
     items: 1,
